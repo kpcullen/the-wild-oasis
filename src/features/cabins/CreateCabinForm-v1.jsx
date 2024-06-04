@@ -9,7 +9,7 @@ import Textarea from "../../ui/Textarea";
 import FormRow from "../../ui/FormRow";
 import { createCabin } from "../../services/apiCabins";
 
-function CreateCabinForm() {
+function CreateCabinForm({ cabinToEdit = {} }) {
   const { register, handleSubmit, reset, getValues, formState } = useForm();
   const { errors } = formState;
 
