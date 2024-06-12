@@ -33,7 +33,7 @@ function DarkModeProvider({ children }) {
 function useDarkMode() {
   const context = useContext(DarkModeContext);
   if (context === undefined)
-    throw new Error("DarkModelContext was used outside of DarkModeProvider");
+    throw new Error("DarkModeContext was used outside of DarkModeProvider");
   return context;
 }
 
