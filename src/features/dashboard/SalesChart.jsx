@@ -1,5 +1,7 @@
 import styled from "styled-components";
 import DashboardBox from "./DashboardBox";
+import Heading from "../../ui/Heading";
+import { AreaChart } from "recharts";
 
 const StyledSalesChart = styled(DashboardBox)`
   grid-column: 1 / -1;
@@ -57,3 +59,14 @@ const colors = isDarkMode
       text: "#374151",
       background: "#fff",
     };
+
+function SalesChart() {
+  return (
+    <StyledSalesChart>
+      <Heading as="h2">Sales</Heading>
+      <AreaChart data={fakeData} />
+    </StyledSalesChart>
+  );
+}
+
+export default SalesChart;
