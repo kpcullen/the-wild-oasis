@@ -13,7 +13,7 @@ export function useLogin() {
       queryClient.setQueryData(["user"], user.user);
       navigate("/dashboard", { replace: true });
     },
-    onError: (err) => {
+    onError: () => {
       toast.error("Provided email or password is incorrect");
     },
   });
